@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;900&display=swap');
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section#one{
+  display: flex;
+  height: 2vh;
+  width: 100vw;
+  z-index: 1;
+  justify-content: flex-end;
+}
+
+section#one>h1{
+  font-family: 'Bree Serif', serif;
+  font-size: 3rem;
+  padding-right: 40px;
+  padding-bottom: 25px;
+  color:rgba(0,17,36,1);
+}
+
+section#waveSection{
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  padding-bottom: 10vh;
+
+
+}
+
+div#blueSpace{
+  height: 5vh;
+  width: 100vw;
+  background-color: #9dd1e2;
+}
+
+ /* wave annimation source code i used: https://csspoint101.com/css-wave-animation/
+ MOVES WAVES UP AND DOWN WITH TRANSLATE*/
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)}
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)}
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)}
+}
+.waveWrapper {
+    overflow: hidden;
+    /* position: absolute; */
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 10px;
+    z-index: 5;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 20%;
+    z-index: 4;
+}
+.bgTop {
+    z-index: 3;
+    opacity: 1;
+}
+.bgMiddle {
+    z-index: 2;
+    opacity: .45;
+}
+.bgBottom {
+    z-index: 1;
+    opacity: .5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+    animation: move_wave 5s linear infinite;
+    /* animation-delay: 0s; */
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+/* depth chart begins here */
+section#second{
+  height: 900vh;
+  width: 100vw;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, #9dd1e2 0%, rgba(0,17,36,1) 100%);
+  z-index: 20;
+}
+
+div#chartbox{
+  /* placeholder */
+}
+
+/* These are the text/space bokes to the right */
+div#depthTxt{
+  /* background-color: green; */
+  width: 30vw;
+  height: 890vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 5vw;
+  padding-top: 5vw;
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color:rgba(0,17,36,1);
+}
+
+p#txtDepth1{
+  width: 20vw;
+  height: 72vh;
+  padding: 10px;
+  background-color: rgba(220, 220, 220, .5);
+}
+
+p#txtDepth2{
+  width: 20vw;
+  height: 50vh;
+  padding: 10px;
+  background-color: rgba(220, 220, 220, .5);
+}
+
+p#txtDepth3{
+  width: 20vw;
+  height: 50vh;
+  padding: 10px;
+  background-color: rgba(220, 220, 220, .5);
+}
+
+p#blankSpace1{
+  width: 10vw;
+  height: 55vh;
+}
+
+p#blankSpace2{
+  width: 20vw;
+  height: 20vh;
+}
+
+p#blankSpace3{
+  width: 20vw;
+  height: 100vh;
+}
+
+p#blankSpace4{
+  width: 20vw;
+  height: 220vh;
+}
+
+p#blankSpace5{
+  width: 20vw;
+  height: 50vh;
+}
+
+canvas#line-chart{
+  border-width: 20px;
+  width: 70vw;
+  display: flex;
+}
+
+/* Sankey diagram begins here  */
+section#third{
+  width: 100vw;
+  height: 80vh;
+  /* background-color: gray; */
+  background-color: rgba(0,17,36,1);
+  display: flex;
+  flex-direction: row;
+}
+
+div#sankey_multiple{
+  width: 80vw;
+  height: 80vh;
+  align-items: center;
+  padding-left: 2.5vw;
+}
+
+div#sanWords{
+  font-size: 1.25rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: white;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  text-align: right;
+  width: 15vw;
+  height: 80vh;
+}
+
+section#titleSankey{
+  background-color: rgba(0,17,36,1);
+  width: 100vw;
+  height: 20vh;
+}
+section#titleSankey>h1{
+  font-family: 'Bree Serif', serif;
+  font-size: 3rem;
+  padding-left: 40px;
+  margin: 0;
+  color: white;
+}
+
+section#titleSankey>p{
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  padding-left: 40px;
+  padding-top: 20px;
+  color: white;
+  margin: 0;
+}
+
+section#end{
+  display: flex;
+  background-color: rgba(0,17,36,1);
+  height: 5vh;
+  color: white;
+  padding-left: 86.5vw;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}

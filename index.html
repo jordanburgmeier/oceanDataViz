@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ocean Visualizations</title>
+<!-- stylesheet -->
+    <link rel="stylesheet" href="css/master.css">
+<!-- chart.js -->
+    <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+    </script>
+<!-- google charts -->
+    <script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
+<!-- package for sankey diagram -->
+    <script type = "text/javascript">google.charts.load('current', {packages: ['sankey']});</script>
+
+  </head>
+  <body>
+    <section id="one">
+      <h1>Ocean Visualizations</h1>
+    </section>
+
+    <section id="waveSection">
+      <div class="waveWrapper waveAnimation">
+
+         <div class="waveWrapperInner bgTop">
+           <div class="wave waveTop" style="background-image: url('imgs/wavesAnnimation-01.png')"></div>
+         </div>
+
+         <div class="waveWrapperInner bgMiddle">
+           <div class="wave waveMiddle" style="background-image: url('imgs/wavesAnnimation-02.png')"></div>
+         </div>
+
+         <div class="waveWrapperInner bgBottom">
+           <div class="wave waveBottom" style="background-image: url('imgs/wavesAnnimation-03.png')"></div>
+         </div>
+
+      </div>
+    </section>
+
+    <div id="blueSpace">
+    <!-- to match waves color -->
+    </div>
+
+
+    <section id="second">
+      <!-- this is the depth chart box  -->
+      <div id="chartbox">
+          <canvas id="line-chart"></canvas>
+      </div>
+      <!-- text over depth information -->
+      <div id="depthTxt">
+        <p id="txtDepth1">Over 60% of our planet is covered by water more than a mile deep. The deep sea is the largest habitat on earth and is largely unexplored. Most people familiar with the oceans know about life only in the intertidal zone, where the water meets land, and the epipelagic zone, the upper sunlit zone of the open ocean. Though these zones contain an abundance of ocean life because sunlight is available for photosynthesis, they make up only a small fraction of the ocean biome. </p>
+        <p id="blankSpace1"></p>
+        <p id="txtDepth2">The sperm whale is the largest of the toothed whales and the largest toothed predator. The sperm whale is a pelagic mammal with a worldwide range, and migrates seasonally. It has the largest brain on Earth, more than five times heavier than a human's. Sperm whales can live 70+ years.</p>
+        <p id="blankSpace2"></p>
+        <p id="txtDepth3">Some of the first known findings pertaining to the goblin shark were published in 1910, and the researcher wrote that, "the new shark is certainly grotesque." The giant Pacific octopus is the largest octopus species and have about 300 million neurons. These animals can be found from the intertidal zone down to 2,000 m.</p>
+        <p id="blankSpace3"></p>
+        <p id="txtDepth3">Once you pass 1,000 meters, the water is completely devoid of light. At this depth temperatures plummet to 39 degrees Fahrenheit, and constantly stay near freezing. We now know that despite this lack of light, many creatures can live in this extreme place.</p>
+        <p id="blankSpace4"></p>
+        <p id="txtDepth3">Dumbo octopuses live in the deep open ocean down to depths of at least 4000 m and perhaps much deeper, making this group the deepest living of all known octopuses. Life at these extreme depths requires the ability to live in very cold water and in the complete absence of sunlight. </p>
+        <p id="blankSpace5"></p>
+        <p id="txtDepth3">The megamouth shark is a species of deepwater shark. It is rarely seen by humans and is the smallest of the three extant filter-feeding sharks alongside the whale shark and basking shark. Since its discovery in 1976, few megamouth sharks have been seen, with fewer than 100 specimens being observed or caught.</p>
+      </div>
+
+    </section>
+
+    <section id="titleSankey">
+      <h1>Drainage Basins by Area</h1>
+      <p>(10,000 miles squared)</p>
+    </section>
+
+    <!-- This is the sankey chart -->
+    <section id="third">
+      <div id="sankey_multiple"></div>
+      <div id="sanWords">
+        <p>About 48.7% of the world's land drains to the Atlantic Ocean. </p><p>Just over 13% of the land in the world drains to the Pacific Ocean.</p><p>The Indian Ocean's drainage basin also comprises about 13% of Earth's land.</p><p>The Arctic Ocean drains sbout 17% of the Earth's land </p><p> The Southern Ocean drains Antarctica which comprises approximately eight percent of the Earth's land. </p>
+
+      </div>
+    </section>
+
+    <section id="end">
+      <p>By: Jordan Burgmeier</p>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.1/chart.min.js" charset="utf-8"></script>
+    <script src="js/depthChart.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/sankeyChart.js" charset="utf-8"></script>
+
+
+
+  </body>
+</html>
+
+<!-- Sources for information:
+https://www.marinebio.org/oceans/deep-sea/
+https://en.wikipedia.org/wiki/Drainage_basin#Ocean_basins
+Wikipedia - for depths and sizes of animals
+ -->
